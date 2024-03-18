@@ -1,0 +1,17 @@
+{
+  "name": "kdt8-m2",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "JavaScript 프로젝트: 직원 관리 서비스",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
