@@ -1,0 +1,23 @@
+.container {
+  max-width: 95%;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.headline {
+  text-align: center;
+}
+
+.headline h1 {
+  font-family: 'Aggro', sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  text-transform: uppercase;
+}
+
+.headline .logo--black {
+  display: inline-block;
+  --width: 5.3rem;
+  vertical-align: middle;
+}

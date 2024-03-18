@@ -1,7 +1,14 @@
 import { Component } from "../core/heropy"
+import Headline from "../components/Headline"
 
 export default class Home extends Component {
   render() {
-    this.el.innerHTML = '메인페이지입니다.111'
+    const headline = new Headline().el
+
+    this.el.classList.add('container')
+
+    this.el.append(
+      headline
+    )
   }
 }
