@@ -48,12 +48,12 @@ export default class CharacterList extends Component {
     this.el.classList.add('characters')
     this.el.innerHTML = /* html */ `
       <p class="text">
-        Click one of the two buttons below to add or delete a character.<br>
+        Click one of the two buttons below to add or delete characters.<br>
         Select the checkbox for the character you want to delete, and then click the delete button.
       </p>
       <div class="character__btn">
         <button type="button" class="btn add">Add a character</button>
-        <button type="button" class="btn delete">Delete a character</button>
+        <button type="button" class="btn delete">Delete characters</button>
       </div>
       <ul class="character__list"></ul>
     `

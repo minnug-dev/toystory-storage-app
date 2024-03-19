@@ -5,7 +5,7 @@ export default class Search extends Component {
     this.el.classList.add('search', 'inner')
     this.el.innerHTML = /* html */ `
       <input type="search" placeholder="Search ToyStory Characters" class="input" />
-      <button type="button" class="btn-search">
+      <button type="button" class="btn">
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
     `
@@ -20,7 +20,7 @@ export default class Search extends Component {
       }
     })
 
-    const searchBtnEl = this.el.querySelector('.btn-search')
+    const searchBtnEl = this.el.querySelector('.btn')
     searchBtnEl.addEventListener('click', () => {
       
     })
