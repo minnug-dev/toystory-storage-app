@@ -5,7 +5,7 @@ export default class Headline extends Component {
     this.el.classList.add('headline')
     this.el.innerHTML = /* html */ `
       <h1>
-        My <span class="logo--black"></span>Characters Storage
+        My&nbsp;<span class="logo--black"></span>&nbsp;Characters&nbsp;&nbsp;Storage
       </h1>
     `
   }

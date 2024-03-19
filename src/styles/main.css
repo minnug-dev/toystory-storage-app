@@ -1,23 +1,314 @@
+/* Common */
+html {
+  font-size: 10px;
+  --color-black: #0e111b;
+  --color-black-40: rgba(0, 0, 0, .4);
+  --color-white: #fff;
+  --color-yellow: #ffd900;
+  --color-red: #e20025;
+  --color-blue: #004e98;
+  --bg-white: rgba(255, 255, 255, .8);
+  --box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05), 0 1px 10px rgba(0, 0, 0, 0.05);
+  --text-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+}
+
+body {
+  font-family: "NanumBarunGothic", "Rubik", Helvetica, "Apple SD Gothic Neo", Dotum, 돋움, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: .05rem;
+  color: var(--color-black);
+  word-wrap: break-word;
+  background: url('../assets/images/bg_main.jpeg') no-repeat center / cover fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  display: block;
+  font-family: "NanumBarunGothic", "Rubik", Helvetica, "Apple SD Gothic Neo", Dotum, 돋움, sans-serif;
+  color: var(--color-black);
+  font-size: 1.8rem;
+  letter-spacing: .05rem;
+  background-color: transparent;
+  border: 0;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+a,
+button {
+  cursor: pointer;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.inner {
+  padding: 3rem;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  border: 2px solid var(--color-black);
+  transition: background-color .3s, color .3s;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: var(--color-black);
+}
+
+.logo {
+  display: block;
+  width: var(--width);
+  height: calc(var(--width) * 2 / 3);
+  background: url('../assets/images/logo_toystory.svg') no-repeat center / contain;
+}
+
+.logo--black {
+  display: block;
+  width: var(--width);
+  height: calc(var(--width) * 2 / 3);
+  background: url('../assets/images/logo_toystory_black.svg') no-repeat center / contain;
+}
+
+.checkbox .label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkbox .checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--bg-white);
+  border: 2px solid var(--color-black);
+}
+
+.checkbox .checkmark i {
+  display: none;
+  font-size: 1.6rem;
+}
+
+.checkbox input:checked~.checkmark i {
+  display: block;
+}
+
+/* Header */
+/* .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+} */
+
+.header .logo {
+  --width: 12rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: var(--color-black);
+  opacity: .7;
+}
+
 .container {
-  max-width: 95%;
-  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
+/* Headline */
 .headline {
   text-align: center;
 }
 
 .headline h1 {
-  font-family: 'Aggro', sans-serif;
-  font-size: 2.5rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  font-size: 4.8rem;
+  text-shadow: var(--text-shadow);
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 .headline .logo--black {
   display: inline-block;
-  --width: 5.3rem;
+  --width: 9rem;
   vertical-align: middle;
+}
+
+/* Character List */
+.characters {
+  padding: 0 12%;
+}
+
+.characters>.text {
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: .1rem;
+}
+
+.character__btn {
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.character__btn .btn {
+  height: 5rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  font-weight: 500;
+}
+
+.character__btn .btn.add {
+  background-color: var(--color-black);
+  color: var(--bg-white);
+}
+
+.character__btn .btn.add:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.character__btn .btn.delete {
+  margin-left: -2px;
+  background-color: var(--bg-white);
+}
+
+.character__btn .btn.delete:hover {
+  background-color: var(--color-red);
+}
+
+.character__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8rem 4rem;
+}
+
+.character__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 31%;
+  padding: 5.5rem 4.5rem 3.8rem;
+  text-align: center;
+  background-color: var(--bg-white);
+  box-shadow: var(--box-shadow);
+  align-content: flex-start;
+  box-sizing: border-box;
+}
+
+.character__item .checkbox {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+
+.character__item .img {
+  --width: 31rem;
+  max-width: 100%;
+  width: var(--width);
+  height: calc(var(--width) * 2 / 3);
+  margin: 0 auto 2.5rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.character__item .img.woody {
+  background-image: url('../assets/images/character_woody.jpg');
+}
+
+.character__item .name {
+  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.character__item .kind {
+  margin-bottom: 2.5rem;
+  font-size: 1.9rem;
+}
+
+/* Search */
+.search {
+  max-width: 60rem;
+  display: flex;
+  margin: 0 auto 3rem;
+}
+
+.search .input {
+  flex-grow: 1;
+  padding: 0 2.5rem;
+  font-size: 1.8rem;
+  background-color: var(--bg-white);
+  border: 2px solid var(--color-black);
+}
+
+.search .btn-search {
+  width: 5.5rem;
+  height: 5.5rem;
+  font-size: 2rem;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.search input::placeholder {
+  color: var(--color-black-40);
 }
