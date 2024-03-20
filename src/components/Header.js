@@ -7,7 +7,7 @@ export default class Header extends Component {
     })
   }
   render() {
-    this.el.classList.add('header', 'inner')
+    this.el.classList.add('header')
     this.el.innerHTML = /* html */ `
       <a href="#/" class="logo"></a>
     `

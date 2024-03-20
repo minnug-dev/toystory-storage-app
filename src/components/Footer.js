@@ -7,7 +7,7 @@ export default class Footer extends Component {
     })
   }
   render() {
-    this.el.classList.add('footer', 'inner')
+    this.el.classList.add('footer')
     this.el.innerHTML = /* html */ `
       <div>
         <p class="copyright">

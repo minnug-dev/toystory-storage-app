@@ -51,9 +51,9 @@ export default class CharacterList extends Component {
         Click one of the two buttons below to add or delete characters.<br>
         Select the checkbox for the character you want to delete, and then click the delete button.
       </p>
-      <div class="character__btn">
-        <button type="button" class="btn add">Add a character</button>
-        <button type="button" class="btn delete">Delete characters</button>
+      <div class="btn-group">
+        <button type="button" class="btn">Add a character</button>
+        <button type="button" class="btn btn--red">Delete characters</button>
       </div>
       <ul class="character__list"></ul>
     `
