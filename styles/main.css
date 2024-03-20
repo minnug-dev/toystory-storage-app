@@ -88,11 +88,14 @@ a {
 }
 
 .btn {
-  display: inline-block;
-  padding: 1.3rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.8rem;
   font-size: 1.6rem;
   font-weight: 500;
   color: #fff;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: .1rem;
   background-color: var(--color-black);
@@ -128,7 +131,7 @@ a {
 }
 
 .input__field {
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
   text-align: left;
 }
 
@@ -139,7 +142,7 @@ a {
 .input__field input {
   width: 100%;
   margin-top: .4rem;
-  padding: 1.1rem 1.5rem;
+  padding: 1rem 1.5rem;
   border: var(--border-black);
 }
 
@@ -243,7 +246,8 @@ h1.title .logo--black {
 }
 
 .characters .btn-group .btn {
-  height: 5.2rem;
+  height: 5.4rem;
+  font-size: 1.7rem;
 }
 
 .character__list {
@@ -327,12 +331,12 @@ h1.title .logo--black {
 /* New Profile */
 .new-profile {
   width: 70rem;
-  margin: 5rem auto 4rem;
+  margin: 4rem auto;
   text-align: center;
 }
 
 .new-profile .container {
-  padding: 6rem 6rem 5rem;
+  padding: 4.5rem 4.5rem 4rem;
   background-color: var(--bg-white);
   box-shadow: var(--box-shadow);
 }
@@ -345,14 +349,11 @@ h1.title .logo--black {
 
 .new-profile h1.title {
   margin-bottom: 2rem;
+  font-size: 4.2rem;
 }
 
 .new-profile .form-btn-group {
   margin-top: 4rem;
-}
-
-.upload-file {
-  margin-bottom: 2.5rem;
 }
 
 .upload-file .img-view {

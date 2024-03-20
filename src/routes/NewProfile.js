@@ -37,7 +37,7 @@ export default class View extends Component {
           </div>
           <div class="form-btn-group btn-group">
             <button type="submit" class="btn">upload</button> 
-            <button type="submit" class="btn btn--cancel">Cancel</button> 
+            <a href="#/" class="btn btn--cancel">Cancel</a> 
           </div> 
         </form>
       </div>
