@@ -1,10 +1,15 @@
 /* Common */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
   --color-black: #0e111b;
-  --color-black-80: rgba(14, 17, 27, .8);
-  --color-black-60: rgba(14, 17, 27, .6);
   --color-black-40: rgba(14, 17, 27, .4);
+  --color-black-60: rgba(14, 17, 27, .6);
+  --color-black-80: rgba(14, 17, 27, .8);
   --color-white: #fff;
   --color-yellow: #ffd900;
   --color-red: #e20025;
@@ -93,6 +98,7 @@ a {
   background-color: var(--color-black);
   border: var(--border-black);
   transition: background-color .3s, color .3s;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -135,7 +141,6 @@ a {
   margin-top: .4rem;
   padding: 1.1rem 1.5rem;
   border: var(--border-black);
-  box-sizing: border-box;
 }
 
 .checkbox .label {
@@ -259,7 +264,6 @@ h1.title .logo--black {
   background-color: var(--bg-white);
   box-shadow: var(--box-shadow);
   align-content: flex-start;
-  box-sizing: border-box;
 }
 
 .character__item .checkbox {
@@ -274,13 +278,13 @@ h1.title .logo--black {
   width: var(--width);
   height: calc(var(--width) * 2 / 3);
   margin: 0 auto 2.5rem;
+  border: var(--border-black);
   background-size: cover;
   background-position: center;
-}
-
-.character__item .img.woody {
   background-image: url('../assets/images/character_woody.jpg');
 }
+
+.character__item .img.woody {}
 
 .character__item .name {
   margin-bottom: 1.5rem;
@@ -339,15 +343,34 @@ h1.title .logo--black {
   margin: 0 auto;
 }
 
-.new-profile .img {
+.upload-file {
+  margin-bottom: 2.5rem;
+}
+
+.upload-file .img-view {
+  display: block;
+  position: relative;
   width: 100%;
   height: 25rem;
-  margin-bottom: 2rem;
   border: var(--border-black);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url('../assets/images/character_andy.jpg');
+  background-image: url('../assets/images/no_image.jpg');
+}
+
+.upload-file label>.btn {
+  width: 100%;
+  margin-top: -2px;
+}
+
+.upload-file .input-file {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .new-profile h1.title {
