@@ -277,7 +277,7 @@ h1.title .logo--black {
 }
 
 .character__item .img {
-  --width: 29rem;
+  --width: 34rem;
   max-width: 100%;
   width: var(--width);
   height: calc(var(--width) * 2 / 3);
@@ -287,8 +287,6 @@ h1.title .logo--black {
   background-position: center;
   background-image: url('../assets/images/character_woody.jpg');
 }
-
-.character__item .img.woody {}
 
 .character__item .name {
   margin-bottom: 1.5rem;
@@ -328,34 +326,35 @@ h1.title .logo--black {
   font-size: 2rem;
 }
 
-/* New Profile */
-.new-profile {
+/* Profile Common */
+.profile {
   width: 70rem;
-  margin: 4rem auto;
+  margin: 6rem auto 3rem;
   text-align: center;
 }
 
-.new-profile .container {
-  padding: 4.5rem 4.5rem 4rem;
+.profile .container {
+  padding: 5rem 4.5rem 4.5rem;
   background-color: var(--bg-white);
   box-shadow: var(--box-shadow);
 }
 
-.new-profile .form {
+.form {
   max-width: 45rem;
   width: 100%;
   margin: 0 auto;
 }
 
-.new-profile h1.title {
-  margin-bottom: 2rem;
+.profile h1.title {
+  margin-bottom: 3rem;
   font-size: 4.2rem;
 }
 
-.new-profile .form-btn-group {
+.profile .btn-group {
   margin-top: 4rem;
 }
 
+/* New Profile */
 .upload-file .img-view {
   display: block;
   position: relative;
@@ -387,6 +386,17 @@ h1.title .logo--black {
   padding: 0;
   opacity: 0;
   overflow: hidden;
+}
+
+/* View Profile */
+.view-profile {
+  margin: 11rem auto 5rem;
+}
+
+.form__view .input__field input {
+  color: var(--color-black-80);
+  border: none;
+  background-color: var(--bg-white);
 }
 
 /* Footer */

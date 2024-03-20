@@ -21,7 +21,7 @@ export default class CharacterItem extends Component {
       <div class="img woody"></div>
       <p class="name">${this.props.name}</p>
       <p class="kind">${this.props.kind}</p>
-      <button type="button" class="btn">View Profile Detail</button>
+      <a href="#/viewProfile" class="btn">View Profile</a>
     `
   }
 }

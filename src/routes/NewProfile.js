@@ -1,12 +1,12 @@
 import { Component } from "../core/heropy"
 
-export default class View extends Component {
+export default class NewProfile extends Component {
   render() {
-    this.el.classList.add('new-profile')
+    this.el.classList.add('profile', 'new-profile')
     this.el.innerHTML = /* html */ `
       <div class="container">
-        <h1 class="title">NEW&nbsp;<span class="logo--black"></span>&nbsp;CHARACTER</h1>
-        <form class="form">
+        <h1 class="title">new&nbsp;<span class="logo--black"></span>&nbsp;character</h1>
+        <form class="form form__new">
           <div class="upload-file">
             <div id="viewImg" class="img-view"></div>
             <label for="file">
@@ -19,19 +19,19 @@ export default class View extends Component {
           </div>
           <div class="input__field">
             <label>
-              Name
+              <span class="title">Name</span>
               <input type="text">
             </label>
           </div>
           <div class="input__field">
             <label>
-              Kind of Toy
+              <span class="title">Kind of Toy</span>
               <input type="text">
             </label>
           </div>
           <div class="input__field">
             <label>
-              Trait 
+              <span class="title">Trait</span>
               <input type="text">
             </label>
           </div>
