@@ -10,7 +10,10 @@ export default class View extends Component {
           <div class="upload-file">
             <div id="viewImg" class="img-view"></div>
             <label for="file">
-              <span class="btn">Click to Upload Image</span>
+              <div class="upload-btn-group btn-group">
+                <span class="btn">Add Image</span>
+                <button type="button" class="btn btn--cancel">Delete Image</button>
+              </div>
               <input type="file" id="file" accept="image/*" class="input-file">
             </label>
           </div>
@@ -32,22 +35,32 @@ export default class View extends Component {
               <input type="text">
             </label>
           </div>
-          <div class="btn-group">
-            <button type="submit" class="btn">Upload</button> 
-            <button type="submit" class="btn btn--red">Cancle</button> 
+          <div class="form-btn-group btn-group">
+            <button type="submit" class="btn">upload</button> 
+            <button type="submit" class="btn btn--cancel">Cancel</button> 
           </div> 
         </form>
       </div>
     `
+    const fileInput = this.el.querySelector('.upload-file .input-file');
+    const deleteBtn = this.el.querySelector('.upload-file .btn--cancel');
+
     // 이미지 업로드
-    const fileInput = this.el.querySelector('.input-file');
     fileInput.addEventListener('change', () => {
       const fileReader = new FileReader();
       fileReader.addEventListener('load', () => {
         const uploadImg = fileReader.result;
         this.el.querySelector('.img-view').style.backgroundImage = `url(${uploadImg})`;
+        deleteBtn.style.display = 'block';
       })
       fileReader.readAsDataURL(fileInput.files[0]);
+    })
+
+    // 이미지 삭제
+    deleteBtn.addEventListener('click', () => {
+      this.el.querySelector('.img-view').style.backgroundImage = '';
+      fileInput.value = '';
+      deleteBtn.style.display = 'none';
     })
   };
 };

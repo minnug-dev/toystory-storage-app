@@ -97,7 +97,7 @@ a {
   letter-spacing: .1rem;
   background-color: var(--color-black);
   border: var(--border-black);
-  transition: background-color .3s, color .3s;
+  transition: background-color .2s, color .2s;
   cursor: pointer;
 }
 
@@ -106,12 +106,12 @@ a {
   background-color: var(--color-yellow);
 }
 
-.btn--red {
+.btn--cancel {
   color: var(--color-black);
   background-color: var(--bg-white);
 }
 
-.btn--red:hover {
+.btn--cancel:hover {
   color: var(--color-white);
   background-color: var(--color-red);
 }
@@ -343,6 +343,14 @@ h1.title .logo--black {
   margin: 0 auto;
 }
 
+.new-profile h1.title {
+  margin-bottom: 2rem;
+}
+
+.new-profile .form-btn-group {
+  margin-top: 4rem;
+}
+
 .upload-file {
   margin-bottom: 2.5rem;
 }
@@ -359,9 +367,16 @@ h1.title .logo--black {
   background-image: url('../assets/images/no_image.jpg');
 }
 
-.upload-file label>.btn {
+.upload-file .upload-btn-group {
+  margin-top: 1.5rem;
+}
+
+.upload-file .upload-btn-group .btn {
   width: 100%;
-  margin-top: -2px;
+}
+
+.upload-file .btn--cancel {
+  display: none;
 }
 
 .upload-file .input-file {
@@ -371,14 +386,6 @@ h1.title .logo--black {
   padding: 0;
   opacity: 0;
   overflow: hidden;
-}
-
-.new-profile h1.title {
-  margin-bottom: 2rem;
-}
-
-.new-profile .btn-group {
-  margin-top: 4rem;
 }
 
 /* Footer */

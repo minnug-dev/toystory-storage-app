@@ -53,7 +53,7 @@ export default class CharacterList extends Component {
       </p>
       <div class="btn-group">
         <button type="button" class="btn">Add a character</button>
-        <button type="button" class="btn btn--red">Delete characters</button>
+        <button type="button" class="btn btn--cancel">Delete characters</button>
       </div>
       <ul class="character__list"></ul>
     `
