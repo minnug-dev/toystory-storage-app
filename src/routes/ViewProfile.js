@@ -1,11 +1,11 @@
-import { Component } from "../core/base"
+import { Component } from "../core/base";
 
 export default class ViewProfile extends Component {
   render() {
-    this.el.classList.add('profile', 'view-profile')
+    this.el.classList.add('profile', 'view-profile');
     this.el.innerHTML = /* html */ `
       <div class="container">
-        <h1 class="title">character&nbsp;&nbsp;profile</h1>
+        <h1 class="title">my&nbsp;<span class="logo--black"></span>&nbsp;profile</h1>
         <form class="form form__view">
           <div class="upload-file">
             <div id="viewImg" class="img-view"></div>
@@ -29,11 +29,11 @@ export default class ViewProfile extends Component {
             </label>
           </div>
           <div class="btn-group">
-            <button type="submit" class="btn">edit</button> 
-            <a href="#/" class="btn btn--cancel btn-close">close</a> 
+            <a href="#/editProfile" class="btn">edit</a> 
+            <a href="#/" class="btn btn--cancel btn-close">cancel</a> 
           </div> 
         </form>
       </div>
-    `
+    `;
   }
 }

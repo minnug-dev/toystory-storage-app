@@ -1,14 +1,14 @@
-import { Component } from "../core/base"
+import { Component } from "../core/base";
 
 export default class CharacterItem extends Component {
   constructor(payload) {
     super({
       tagName: 'li',
       props: payload.props
-    })
+    });
   }
   render() {
-    this.el.classList.add('character__item')
+    this.el.classList.add('character__item');
     this.el.innerHTML = /* html */ `
       <div class="checkbox">
         <label class="label">
@@ -21,7 +21,7 @@ export default class CharacterItem extends Component {
       <div class="img woody"></div>
       <p class="name">${this.props.name}</p>
       <p class="info kind">
-        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-tag"></i>
         ${this.props.kind}
       </p>
       <p class="info trait">
@@ -29,6 +29,6 @@ export default class CharacterItem extends Component {
         ${this.props.trait}
       </p>
       <a href="#/viewProfile" class="btn">View Profile</a>
-    `
+    `;
   }
 }

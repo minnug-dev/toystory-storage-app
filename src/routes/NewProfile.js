@@ -1,12 +1,12 @@
-import { Component } from "../core/base"
+import { Component } from "../core/base";
 
 export default class NewProfile extends Component {
   render() {
-    this.el.classList.add('profile', 'new-profile')
+    this.el.classList.add('profile', 'new-profile');
     this.el.innerHTML = /* html */ `
       <div class="container">
         <h1 class="title">new&nbsp;<span class="logo--black"></span>&nbsp;character</h1>
-        <form class="form form__new">
+        <form id="newForm" class="form form__new">
           <div class="upload-file">
             <div id="viewImg" class="img-view"></div>
             <label for="file">
@@ -17,31 +17,31 @@ export default class NewProfile extends Component {
               <input type="file" id="file" accept="image/*" class="input-file">
             </label>
           </div>
-          <div class="input__field">
+          <div class="input__field field-name">
             <label>
               <span class="title">Name</span>
               <input type="text">
             </label>
           </div>
-          <div class="input__field">
+          <div class="input__field field-kind">
             <label>
               <span class="title">Kind of Toy</span>
               <input type="text">
             </label>
           </div>
-          <div class="input__field">
+          <div class="input__field field-trait">
             <label>
               <span class="title">Trait</span>
               <input type="text">
             </label>
           </div>
           <div class="form-btn-group btn-group">
-            <button type="submit" class="btn">upload</button> 
+            <button type="submit" class="btn">Create</button> 
             <a href="#/" class="btn btn--cancel">Cancel</a> 
           </div> 
         </form>
       </div>
-    `
+    `;
     const fileInput = this.el.querySelector('.upload-file .input-file');
     const deleteBtn = this.el.querySelector('.upload-file .btn--cancel');
 
@@ -52,15 +52,15 @@ export default class NewProfile extends Component {
         const uploadImg = fileReader.result;
         this.el.querySelector('.img-view').style.backgroundImage = `url(${uploadImg})`;
         deleteBtn.style.display = 'block';
-      })
+      });
       fileReader.readAsDataURL(fileInput.files[0]);
-    })
+    });
 
     // 이미지 삭제
     deleteBtn.addEventListener('click', () => {
       this.el.querySelector('.img-view').style.backgroundImage = '';
       fileInput.value = '';
       deleteBtn.style.display = 'none';
-    })
-  };
-};
+    });
+   }
+}

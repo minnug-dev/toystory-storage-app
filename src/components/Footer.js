@@ -1,13 +1,13 @@
-import { Component } from "../core/base"
+import { Component } from "../core/base";
 
 export default class Footer extends Component {
   constructor() {
     super({
       tagName: 'footer'
-    })
+    });
   }
   render() {
-    this.el.classList.add('footer')
+    this.el.classList.add('footer');
     this.el.innerHTML = /* html */ `
       <div>
         <p class="copyright">
@@ -16,6 +16,6 @@ export default class Footer extends Component {
           ParkMinJoo. All Rights Reserved.
         </p>
       </div>    
-    `
+    `;
   }
 }
