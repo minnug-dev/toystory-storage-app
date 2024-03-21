@@ -1,4 +1,4 @@
-import { Component } from "../core/heropy"
+import { Component } from "../core/base"
 
 export default class NewProfile extends Component {
   render() {

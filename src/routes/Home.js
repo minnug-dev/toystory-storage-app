@@ -1,4 +1,4 @@
-import { Component } from "../core/heropy"
+import { Component } from "../core/base"
 import Headline from "../components/Headline"
 import CharacterList from "../components/CharacterList"
 import Search from "../components/Search"

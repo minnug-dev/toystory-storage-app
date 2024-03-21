@@ -1,4 +1,4 @@
-import { Component } from "../core/heropy"
+import { Component } from "../core/base"
 import CharacterItem from "./CharacterItem"
 
 export default class CharacterList extends Component {

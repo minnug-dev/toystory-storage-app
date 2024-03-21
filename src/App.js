@@ -1,4 +1,4 @@
-import { Component } from "./core/heropy"
+import { Component } from "./core/base"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 

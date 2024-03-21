@@ -1,4 +1,4 @@
-import { Component, createRouter } from "../core/heropy"
+import { Component, createRouter } from "../core/base"
 import Home from "./Home"
 import NewProfile from "./NewProfile"
 import ViewProfile from "./ViewProfile"
