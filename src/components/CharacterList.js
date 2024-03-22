@@ -183,15 +183,25 @@ export default class CharacterList extends Component {
       </div>
       <ul class="character__list"></ul>
     `;
+       // const characterList = this.el.querySelector('.character__list');
+    // characterList.append(...this.state.characters.map(character => new CharacterItem({
+    //     props: {
+    //       name: character.name,
+    //       kind: character.kind,
+    //       trait: character.trait
+    //     }
+    //   }).el)
+    // );
     const characterList = this.el.querySelector('.character__list');
-    characterList.append(...this.state.characters
-      .map(character => new CharacterItem({
+    this.state.characters.forEach(character => {
+      const characterItem = new CharacterItem({
         props: {
           name: character.name,
           kind: character.kind,
           trait: character.trait
         }
-      }).el)
-    );
+      });
+      characterList.appendChild(characterItem.el);
+    });
   }
 }

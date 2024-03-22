@@ -18,6 +18,7 @@ html {
   --box-shadow: 0 0px 20px rgba(0, 0, 0, 0.07), 0 0px 20px rgba(0, 0, 0, 0.07);
   --text-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
   --border-black: 3px solid #0e111b;
+  --border-whtie: 3px solid #fff;
 }
 
 body {
@@ -37,7 +38,8 @@ a {
 }
 
 button,
-input {
+input,
+textarea {
   display: block;
   font-family: "NanumBarunGothic", "Rubik", Helvetica, "Apple SD Gothic Neo", Dotum, 돋움, sans-serif;
   color: var(--color-black);
@@ -45,6 +47,7 @@ input {
   letter-spacing: .05rem;
   background-color: transparent;
   border: 0;
+  outline: none;
 }
 
 button:focus,
@@ -100,7 +103,7 @@ a {
   letter-spacing: .1rem;
   background-color: var(--color-black);
   border: var(--border-black);
-  transition: background-color .2s, color .2s;
+  transition: all .3s;
   cursor: pointer;
 }
 
@@ -130,20 +133,32 @@ a {
   flex-basis: 0;
 }
 
-.input__field {
+.form__field {
   margin-top: 1.5rem;
   text-align: left;
 }
 
-.input__field label {
+.form__field label {
   font-weight: 500;
 }
 
-.input__field input {
+.form__field input,
+.form__field textarea {
   width: 100%;
   margin-top: .4rem;
   padding: 1rem 1.5rem;
   border: var(--border-black);
+  background-color: var(--bg-white);
+}
+
+.form__field textarea {
+  resize: none;
+}
+
+.form__field input:focus,
+.form__field textarea:focus {
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
 }
 
 .checkbox .label {
@@ -293,7 +308,7 @@ h1.title .logo--black {
 .character__item .info {
   position: relative;
   margin-bottom: 1rem;
-  padding-left: 2.8rem;
+  padding-left: 2.6rem;
   font-size: 2rem;
   text-align: left;
 }
@@ -303,15 +318,33 @@ h1.title .logo--black {
   position: absolute;
   top: 4px;
   left: 0;
-  color: var(--color-yellow);
+  color: var(--color-black);
   font-size: 1.7rem;
 }
 
+.character__item .info.kind i {
+  top: 5px;
+  left: 2px;
+}
+
 .character__item .name {
+  display: inline-block;
+  position: relative;
+  padding-bottom: .8rem;
   margin-bottom: 1.6rem;
   font-size: 2.8rem;
   font-weight: 600;
   text-align: center;
+}
+
+.character__item .name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-black);
 }
 
 .character__item>.btn {
@@ -407,20 +440,15 @@ h1.title .logo--black {
   overflow: hidden;
 }
 
-/* View Profile */
-.view-profile {
-  margin: 11rem auto 5rem;
-}
-
-.form__view .input__field input {
-  color: var(--color-black-80);
-  border: none;
+/* view Profile */
+.view-profile .form__field input:focus {
   background-color: var(--bg-white);
+  box-shadow: none;
 }
 
 /* Footer */
 .footer {
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
   color: var(--color-black-80);
 }

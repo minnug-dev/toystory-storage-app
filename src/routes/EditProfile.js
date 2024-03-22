@@ -1,8 +1,8 @@
 import { Component } from "../core/base";
 
-export default class ViewProfile extends Component {
+export default class EditProfile extends Component {
   render() {
-    this.el.classList.add('profile', 'view-profile');
+    this.el.classList.add('profile', 'edit-profile');
     this.el.innerHTML = /* html */ `
       <div class="container">
         <h1 class="title">my&nbsp;<span class="logo--black"></span>&nbsp;profile</h1>
@@ -25,11 +25,11 @@ export default class ViewProfile extends Component {
           <div class="form__field">
             <label>
               <span class="title">Trait</span>
-              <textarea value="Duke Caboom is a 1970s toy based on Canada’s greatest stuntman. Riding his powerful Caboom stunt-cycle, Duke is always prepared to show off his stunt poses with confidence and swagger. However, Woody learns quickly that Duke has an Achilles heel: He has never been able to do the awesome stunts advertised in his own toy commercial. For years, Duke has been sitting in an antique store, constantly reliving the failures of his tragic past."></textarea>
+              <textarea value="Duke Caboom is a 1970s toy based on Canada greatest stuntman. Riding his powerful Caboom stunt-cycle, Duke is always prepared to show off his stunt poses with confidence and swagger. However, Woody learns quickly that Duke has an Achilles heel: He has never been able to do the awesome stunts advertised in his own toy commercial. For years, Duke has been sitting in an antique store, constantly reliving the failures of his tragic past."></textarea>
             </label>
           </div>
           <div class="btn-group">
-            <a href="#/editProfile" class="btn">edit</a> 
+            <button type="submit" class="btn">Save</button> 
             <a href="#/" class="btn btn--cancel btn-close">cancel</a> 
           </div> 
         </form>
